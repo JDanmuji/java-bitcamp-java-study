@@ -1,0 +1,22 @@
+package constructor;
+
+public class ConstructorMain {
+	private String name;
+	private int age;
+	
+	public void ConstructorMain() {
+		System.out.println("default 생성자");
+	}
+	
+
+	public ConstructorMain(String name) {
+		System.out.println("생성자");
+	}
+		
+	public static void main(String[] args) {
+		ConstructorMain aa = new ConstructorMain();
+		
+		System.out.println(aa.name);
+		System.out.println(aa.age);
+	}
+}

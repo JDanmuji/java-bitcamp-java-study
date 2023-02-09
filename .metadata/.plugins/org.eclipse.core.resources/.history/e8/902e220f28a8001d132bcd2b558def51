@@ -1,0 +1,12 @@
+package constructor;
+
+public class VarArgs {
+	
+	public VarArgs() {
+		
+	}
+
+	public static void main(String[] args) {
+		VarArgs va = new VarArgs();
+	}
+}

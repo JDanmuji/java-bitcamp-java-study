@@ -1,0 +1,15 @@
+package constructor;
+
+public class ConstructorMain {
+	private int a;
+	
+	public void ConstructorMain() {
+		System.out.println("default 생성자");
+	}
+		
+	public static void main(String[] args) {
+		ConstructorMain aa = new ConstructorMain();
+		System.out.println(aa.a);
+		System.out.println(aa.a);
+	}
+}

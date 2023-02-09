@@ -1,0 +1,11 @@
+package constructor;
+
+public class MemberDTO {
+//DTO : Data Transfer Object (1인분 클래스)
+//VO : Value Object
+	private String name = "";
+	private String name = "";
+	private String name = "";
+	private String name = "";
+	
+}

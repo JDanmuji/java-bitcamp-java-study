@@ -1,0 +1,189 @@
+package constructor;
+
+import java.lang.reflect.Member;
+import java.util.Scanner;
+
+public class MemberService {
+	
+	Scanner scan = new Scanner(System.in);
+	private MemberDTO[] ar =  new MemberDTO[2];
+	private static int number_count = 0;
+	String name;
+	int age;
+	String phone;
+	String addr;
+	String phone_num;
+	
+	
+	public MemberService() {
+		System.out.println("기본 생성자");
+	}
+
+	public void menu() {
+		
+		int num = 0;
+		
+		System.out.println("****************************");
+		System.out.println("\t1. 가입");
+		System.out.println("\t2. 출력");
+		System.out.println("\t3. 수정");
+		System.out.println("\t4. 탈퇴");
+		System.out.println("\t5. 끝내기");
+		System.out.println("****************************");
+		
+		
+		while(num != 5) {
+			System.out.println("번호 : ");
+			
+			num = scan.nextInt();
+			
+			if(num == 1) {
+				insertArticle();
+			} else if (num == 2) {
+				list();
+			} else if (num == 3) {
+				update(ar);
+			} else if (num == 4) {
+				delete(ar);
+			}
+		}
+
+		System.out.println("프로그램이 종료되었습니다.");
+		
+	}
+
+	public void insertArticle() { //함수는 public으로 공개 시키는 것이 제일 좋다
+//		int i;
+//		for (i=0; i < ar.length; i++) {
+//			if (ar[i] == null) break;
+//			
+//		}
+//		
+//		if (i == ar.length) {
+//			System.out.println(ar.length);
+//		}
+//		
+		
+		if(number_count < 5) {
+			
+			for (int j=number_count; j < ar.length; j++) {
+				
+				System.out.println("이름 입력 : ");
+				name = scan.next();
+				System.out.println("나이 입력 : ");
+				age = scan.nextInt();
+				System.out.println("핸드폰 입력 : ");
+				phone = scan.next();
+				System.out.println("주소 입력 : ");
+				addr = scan.next();
+				
+				ar[j] = new MemberDTO(name, age, phone, addr);
+				
+				number_count++;
+				
+				System.out.println("1 row(s) inserted");
+				break;
+			}
+		} else {
+			System.out.println(number_count+1 + " 명의 정원이 꽉 찼습니다.");
+		}
+		
+		
+	}
+
+	public void list() {
+		// TODO Auto-generated method stub
+	
+		System.out.println("이름\t나이\t핸드폰\t주소");
+		for (MemberDTO dto : ar) {
+			if (dto != null) {	
+				System.out.print(dto.getName()+"\t");
+				System.out.print(dto.getAge()+"\t");
+				System.out.print(dto.getPhone()+"\t");
+				System.out.println(dto.getAddress()+"\t");
+			}
+		}
+		
+	}
+
+	public void update() {
+		boolean check = false;
+		
+		System.out.println("핸드폰 번호 입력 : ");
+		phone_num = scan.next();
+		
+		for (int i = 0; i < this.ar.length; i++) {
+			
+			
+			if ( this.ar[i] != null) {	
+				if ( this.ar[i].getPhone().equals( phone_num)) {
+					System.out.print( this.ar[i].getName()+"\t");
+					System.out.print( this.ar[i].getAge()+"\t");
+					System.out.print( this.ar[i].getPhone()+"\t");
+					System.out.print( this.ar);	
+					System.out.println();
+					
+					System.out.println("수정 할 이름 입력 : ");
+					name = scan.next();
+//					System.out.println("수정 할 나이 입력 : ");
+//					age = scan.nextInt();
+					System.out.println("수정 할 핸드폰 입력 : ");
+					phone = scan.next();
+					System.out.println("수정할 주소 입력 : ");
+					addr = scan.next();
+					
+					ar[i].setName(name);
+					ar[i].setPhone(phone);
+					ar[i].setAddress(addr);
+					
+					System.out.println("1 row(s) updated");
+					check = true;
+				}
+	
+			}
+			
+			
+		}
+		
+		if (!check) {
+			System.out.println("찾는 회원이 없습니다.");
+		}
+				
+		
+	}
+
+	public void delete(MemberDTO[] ar) {
+		
+		boolean check = false;
+		
+		System.out.println("핸드폰 번호 입력 : ");
+		phone_num = scan.next();
+		
+
+		for (int i = 0; i < ar.length; i++) {
+			
+			if (ar[i] != null) {	
+				if (ar[i].getPhone().equals( phone_num)) {
+					
+					
+					ar[i] = null;
+					
+					
+					System.out.println("1 row(s) deleted");
+					number_count--;
+					check = true;
+				}
+	
+			}
+		
+		}
+				
+		
+		if (!check) {
+			System.out.println("찾는 회원이 없습니다.");
+		}
+		
+	}
+	
+	
+}

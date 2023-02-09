@@ -1,0 +1,47 @@
+package constructor;
+
+import java.util.Scanner;
+
+public class MemberService {
+
+	
+	public MemberService() {
+		System.out.println("기본 생성자");
+	}
+
+	public void menu() {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("****************************");
+		System.out.println("1. 가입");
+		System.out.println("2. 출력");
+		System.out.println("3. 수정");
+		System.out.println("4. 탈퇴");
+		System.out.println("5. 끝내기");
+
+		
+		
+	}
+
+	public void insert() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void list() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

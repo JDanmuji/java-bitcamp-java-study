@@ -1,0 +1,99 @@
+package constructor;
+
+import java.util.Scanner;
+
+public class MemberService {
+	
+	private MemberDTO[] ar =  new MemberDTO[5];
+	private static int number_count = 0;
+	
+	public MemberService() {
+		System.out.println("기본 생성자");
+	}
+
+	public void menu() {
+		Scanner scan = new Scanner(System.in);
+		int num = 0;
+		
+		System.out.println("****************************");
+		System.out.println("\t1. 가입");
+		System.out.println("\t2. 출력");
+		System.out.println("\t3. 수정");
+		System.out.println("\t4. 탈퇴");
+		System.out.println("\t5. 끝내기");
+		System.out.println("****************************");
+		
+		
+		while(num != 5) {
+			System.out.println("번호 : ");
+			
+			num = scan.nextInt();
+			
+			if(num == 1) {
+				insertArticle();
+			} else if (num == 2) {
+				list();
+			} else if (num == 3) {
+				update();
+			} else if (num == 4) {
+				delete();
+			}
+		}
+
+		System.out.println("프로그램이 종료되었습니다.");
+		
+	}
+
+	public void insertArticle() { //함수는 public으로 공개 시키는 것이 제일 좋다
+		Scanner scan = new Scanner(System.in);
+
+		if(number_count < 5) {
+			
+		
+			for (int i=number_count; i < ar.length; i++) {
+				System.out.println("이름 입력 : ");
+				ar[i].setName(scan.next());
+				System.out.println("나이 입력 : ");
+				ar[i].setAge(scan.nextInt());
+				System.out.println("핸드폰 입력 : ");
+				ar[i].setPhone(scan.next());
+				System.out.println("주소 입력 : ");
+				ar[i].setAddress(scan.next());
+				number_count++;
+			}
+		} else {
+			System.out.println(number_count+1 +"명의 정원이 꽉 찼습니다.");
+		}
+		
+		
+	}
+
+	public void list() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("이름\t나이\t핸드폰\t주소");
+		for (int i=number_count; i < ar.length; i++) {
+			System.out.println("이름 입력 : ");
+			ar[i].setName(scan.next());
+			System.out.println("나이 입력 : ");
+			ar[i].setAge(scan.nextInt());
+			System.out.println("핸드폰 입력 : ");
+			ar[i].setPhone(scan.next());
+			System.out.println("주소 입력 : ");
+			ar[i].setAddress(scan.next());
+			number_count++;
+		}
+	}
+
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

@@ -1,0 +1,6 @@
+package constructor;
+
+public class MemberDTO {
+//DTO : Data Transfer Object
+//VO : Value Object
+}
