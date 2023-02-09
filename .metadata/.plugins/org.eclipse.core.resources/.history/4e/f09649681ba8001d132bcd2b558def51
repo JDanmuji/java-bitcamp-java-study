@@ -1,0 +1,12 @@
+package class_;
+
+public class ThisMain {
+	private int a;
+	
+	public static void main(String[] args) {
+		ThisMain tm = new ThisMain();
+		tm.a = 0;
+	}
+}
+
+//모든 클래스는 반드시 생성해야한다.

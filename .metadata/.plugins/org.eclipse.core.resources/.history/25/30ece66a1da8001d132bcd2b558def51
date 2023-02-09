@@ -1,0 +1,46 @@
+package class_;
+
+class This {
+	private int b;
+	private static int c;
+	
+	public void setB(int b) {
+		this.b = b;
+	}
+	
+	public int getB() {
+		
+		return b;
+	}
+	
+	public void setC(int n) {
+		c = n;
+	}
+	
+	public int getC() {
+		
+		return c;
+	}
+	
+}
+
+
+public class ThisMain {
+	private int a;
+	
+	public static void main(String[] args) {
+		ThisMain tm = new ThisMain();
+		tm.a = 10;
+		
+		This t = new This();
+		t.setB(20);
+		
+		System.out.println(t.getB());
+		
+		t.setB(30);
+		System.out.println(t.getC());
+		
+	}
+}
+
+//모든 클래스는 반드시 생성해야한다.

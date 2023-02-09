@@ -1,0 +1,9 @@
+package class_;
+
+public class ThisMain {
+	private int a;
+	
+	public static void main(String[] args) {
+		
+	}
+}
