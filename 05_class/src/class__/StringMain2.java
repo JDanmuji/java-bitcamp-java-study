@@ -11,6 +11,8 @@ public class StringMain2 {
 		String content_after = null;
 		int num = 0;
 		
+		String patten  = "[a-zA-z]"; 
+		
 		while (true) {
 			System.out.print("문자열 입력 : ");
 			content = scan.next();
@@ -24,21 +26,10 @@ public class StringMain2 {
 //			for (int i = 0; i < content.length(); i++) {
 //				System.out.println(i + " : " +  content.charAt(i));
 //			
-			if (content.indexOf(content_after)  < 0 ) {
-			
-				System.out.println("치환 할 수 없습니다");
-
-			} else if (content.length() < content_after.length()) {
-				
-				System.out.println("입력한 문자열의 크기가 작습니다");
-				
-			}	else {
-			
-				for(int i = 0; i < content.length(); i++) {
-					
-				}
-			
-			}
+		
+		
+		
+		
 			
 			
 			
