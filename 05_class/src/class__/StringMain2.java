@@ -1,10 +1,58 @@
 package class__;
 
+import java.util.Scanner;
+
 public class StringMain2 {
 
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String content = null;
+		String content_before = null;
+		String content_after = null;
+		int num = 0;
 		
+		while (true) {
+			System.out.print("문자열 입력 : ");
+			content = scan.next();
+			
+			System.out.print("현재 문자열 입력 : ");
+			content_before = scan.next();
+			
+			System.out.print("바꿀 문자열 입력 : ");
+			content_after = scan.next();
+			
+//			for (int i = 0; i < content.length(); i++) {
+//				System.out.println(i + " : " +  content.charAt(i));
+//			
+			if (content.indexOf(content_after)  < 0 ) {
+			
+				System.out.println("치환 할 수 없습니다");
+
+			} else if (content.length() < content_after.length()) {
+				
+				System.out.println("입력한 문자열의 크기가 작습니다");
+				
+			}	else {
+			
+				for(int i = 0; i < content.length(); i++) {
+					
+				}
+			
+			}
+			
+			
+			
+			
+			
+		}
+			
+			
+			
+			
 	}
+		
+		
+
 }
 
 

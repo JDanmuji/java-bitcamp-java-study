@@ -97,24 +97,43 @@ public class ShapeMain {
 
 	
 	public static void main(String[] args) {
-		Sam sam = new Sam();
+		/*
+		 * Sam sam = new Sam();
+		 * 
+		 * sam.calcArea(); sam.dispArea();
+		 * 
+		 * System.out.println();
+		 * 
+		 * Sa sa = new Sa();
+		 * 
+		 * sa.calcArea(); sa.dispArea();
+		 * 
+		 * System.out.println();
+		 * 
+		 * Sadari sadari = new Sadari();
+		 * 
+		 * sadari.calcArea(); sadari.dispArea();
+		 
+		 */
 		
-		sam.calcArea();
-		sam.dispArea();
+		
+		
+		// 다형성 => 부모가 자식 클래스를 참조 할 수 있다. 부모 = 자식
+		Shape shape;
+		shape = new Sam();
+		shape.calcArea();
+		shape.dispArea();
 		
 		System.out.println();
+
+		shape = new Sa();
+		shape.calcArea();
+		shape.dispArea();
 		
-		Sa sa = new Sa();
+		shape = new Sadari();
+		shape.calcArea();
+		shape.dispArea();
 		
-		sa.calcArea();
-		sa.dispArea();
-		
-		System.out.println();
-		
-		Sadari sadari = new Sadari();
-		
-		sadari.calcArea();
-		sadari.dispArea();
 		
 	}
 }
