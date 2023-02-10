@@ -17,6 +17,13 @@ public class Token {
 			
 		}
 		
+		System.out.println("---------------------------------------");
+		
+		String[] ar = str.split(",");
+		
+		for (String data : ar) {
+			System.out.println(data);
+		}
 				
 	}
 }
