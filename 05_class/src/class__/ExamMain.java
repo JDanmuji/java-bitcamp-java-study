@@ -15,28 +15,42 @@ public class ExamMain {
 		Exam[] exam = new Exam[cnt];
 		
 		
-		for (int i=0; i < exam.length; i++) {
+		for (int i = 0; i < exam.length; i++) {
 			
 			exam[i] = new Exam();
 			exam[i].compare();
 			 
 		}
 		
-		System.out.print("이름\t1 2 3 4 5\t점수");
+		System.out.print("이름\t1\t2\t3\t4\t5\t점수");
 		
-		for (int i=0; i < exam.length; i++) {
+//		for (int i = 0; i < exam.length; i++) {
+//			
+//			System.out.print("\n" + exam[i].getName() + "\t");
+//			
+//			for (int k = 0; k < 5; k++) {
+//				
+//				System.out.print(exam[i].getOx()[k] + "\t");	
+//			}
+//			
+//			System.out.print(exam[i].getScore() + "\t");
+//					
+//			
+//		}
+		
+		for (Exam e : exam) {
+		
+		System.out.print("\n" + e.getName() + "\t");
+		
+		for (int k = 0; k < 5; k++) {
 			
-			System.out.print("\n" + exam[i].getName() + "\t");
-			
-			for (int k=0; k < 5; k++) {
-				
-				System.out.print(exam[i].getOx()[k] + "\t");	
-			}
-			
-			System.out.print(exam[i].getScore() + "\t");
-					
-			
+			System.out.print(e.getOx()[k] + "\t");	
 		}
+		
+		System.out.print(e.getScore() + "\t");
+				
+		
+	}
 		
 		//객체배열
 	}
