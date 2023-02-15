@@ -1,5 +1,7 @@
 package SungJuk;
 
+
+
 public class SungJukDTO {
 	private int no = 0;
 	private String name = null;
@@ -108,10 +110,6 @@ public class SungJukDTO {
 	public String toString() {
 		return no+"\t"+name+"\t"+kr+"\t"+eng+"\t"+math+"\t"+tot+"\t"+avg;
 	}
-	
-
-
-
 
 	
 	

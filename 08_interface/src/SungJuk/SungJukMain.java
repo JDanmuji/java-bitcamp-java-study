@@ -27,6 +27,7 @@ Class     : SungJukDTO.java - 1인분
             SungJukService.java - menu() 작성
             SungJukMain.java
 
+
 [조건]
 1. SungJukDTO.java
 필드 : 번호(중복X), 이름, 국어, 영어, 수학, 총점, 평균
@@ -72,6 +73,25 @@ Class     : SungJukDTO.java - 1인분
 수정하였습니다.
 
 6. SungJukDelete.java
+- 이름을 입력하여 없는 이름이면 "회원의 정보가 없습니다" 출력하시오
+- 똑같은 이름이 있으면 모두 삭제한다.
+
+삭제할 이름 입력 : 천사
+회원의 정보가 없습니다
+
+또는 
+
+삭제하였습니다.
+
 
 7. SungJukSort.java
+********************
+  1. 총점으로 내림차순
+  2. 이름으로 오름차순
+  3. 이전 메뉴
+********************
+  번호 : 
+  
+
+
  * */
