@@ -24,6 +24,10 @@ public class AbstractMain extends AbstractTest {
 			public void bb() {}
 			
 		};
+		
+		AbstractExam ae = new AbstractExam() {
+			
+		};
 	}
 
 }
