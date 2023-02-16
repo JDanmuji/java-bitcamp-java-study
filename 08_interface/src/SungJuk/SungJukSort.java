@@ -35,30 +35,44 @@ class AscendingObj implements Comparator<SungJukDTO> {
 
 }
 
+
+
+
 public class SungJukSort implements SungJuk {
 
-	@Override
-	public void execute(ArrayList<SungJukDTO> arrayList) {
+	public void menu(ArrayList<SungJukDTO> arrayList) {
 		int sort_num = 0;
 		SungJukList sungJuckList = new SungJukList();
 		DescendingObj descending = new DescendingObj();
 		AscendingObj ascendingObj = new AscendingObj();
 	
+		while (true) {
+			System.out.println("********************************");
+			System.out.println("1. 총점으로 내림차순");
+			System.out.println("2. 이름으로 오름차순");
+			System.out.println("3. 이전메뉴");
+			System.out.println("********************************");
+			sort_num = scan.nextInt();
+			
+			if (sort_num ==3) break;
+			
+			if (sort_num == 1) {
+				Collections.sort(arrayList, descending.reversed());
+				sungJuckList.execute(arrayList);
+			
+			} else if (sort_num == 2){
+				Collections.sort(arrayList, ascendingObj);
+				sungJuckList.execute(arrayList);
+			} 
+			
+		}
+	}
 	
-		System.out.println("********************************");
-		System.out.println("1. 총점으로 내림차순");
-		System.out.println("2. 이름으로 오름차순");
-		System.out.println("3. 이전메뉴");
-		System.out.println("********************************");
-		sort_num = scan.nextInt();
+	@Override
+	public void execute(ArrayList<SungJukDTO> arrayList) {
+		System.out.println();
+		this.menu(arrayList);
 		
-		if (sort_num == 1) {
-			Collections.sort(arrayList, descending.reversed());
-			sungJuckList.execute(arrayList);
-		} else if (sort_num == 2){
-			Collections.sort(arrayList, ascendingObj);
-			sungJuckList.execute(arrayList);
-		} 
 
 		
 	}
