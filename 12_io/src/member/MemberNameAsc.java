@@ -21,7 +21,6 @@ public class MemberNameAsc implements Member {
 	
 	public void menu(ArrayList<MemberDTO> arrayList) {
 		AscendingObj ascendingObj = new AscendingObj();
-		
 		MemberPrint memberPrint = new MemberPrint();
 		
 		Collections.sort(arrayList, ascendingObj);
@@ -33,8 +32,6 @@ public class MemberNameAsc implements Member {
 	public void execute(ArrayList<MemberDTO> arrayList) {
 		System.out.println();
 		this.menu(arrayList);
-	
-		
 	}
 	
 	

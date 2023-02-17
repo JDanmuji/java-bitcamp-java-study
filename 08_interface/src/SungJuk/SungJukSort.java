@@ -61,7 +61,7 @@ public class SungJukSort implements SungJuk {
 				sungJuckList.execute(arrayList);
 			
 			} else if (sort_num == 2){
-				Collections.sort(arrayList, ascendingObj);
+				Collections.sort(arrayList, ascendingObj); 
 				sungJuckList.execute(arrayList);
 			} 
 			

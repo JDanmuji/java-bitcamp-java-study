@@ -20,6 +20,8 @@ public class MemberFileInput implements Member {
 		
 		ArrayList<MemberDTO> data = (ArrayList<MemberDTO>) ois.readObject();
 		
+		arrayList.clear();
+		
 		System.out.println("이름\t나이\t전화번호\t주소");
 		
 		for (MemberDTO memberDTO : data) {
@@ -28,7 +30,12 @@ public class MemberFileInput implements Member {
 			System.out.print(memberDTO.getPhone() + "\t");
 			System.out.print(memberDTO.getAddress() + "\t");
 			System.out.println();
+			
+
+			arrayList.add(memberDTO);
 		}
+		
+		
 		
 	
 		
