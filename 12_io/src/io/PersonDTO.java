@@ -1,6 +1,8 @@
 package io;
 
-public class PersonDTO {
+import java.io.Serializable;
+
+public class PersonDTO implements Serializable{
 	private String name;
 	private int age;
 	private double height;
